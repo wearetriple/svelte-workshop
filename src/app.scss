@@ -1,0 +1,9 @@
+@use "./lib/ui/styling/helpers.module.scss" as *;
+
+html {
+  background-color: var(--background_color);
+  font-size: 10px;
+  font-family: "Rubik", serif;
+  font-weight: 300;
+  overflow: hidden;
+}

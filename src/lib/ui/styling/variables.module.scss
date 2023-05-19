@@ -1,0 +1,22 @@
+// responsive breakpoints
+$bp_small_phone: 350px; // small mobile
+$bp_phone: 600px; // mobile
+$bp_tablet: 768px; // tablet
+$bp_tablet_big: 1024px; // tablet-big
+$bp_laptop: 1440px; // desktop
+$bp_monitor: 1920px; // monitor
+
+:root {
+  // define all theme colors in variables
+  --white: #fff;
+  --offwhite: #f7f7ff;
+  --primary_daylight: #edf6ff;
+  --primary_midnight: #0e0940;
+  --primary_purple: #5631e8;
+
+  // assign all theme colors to the place they should be rendered
+  --background_color: var(--primary_daylight);
+  --pokemon_background_color: var(--offwhite);
+  --sidebar_background_color: var(--white);
+  --pokemon_title_background: var(--white);
+}
