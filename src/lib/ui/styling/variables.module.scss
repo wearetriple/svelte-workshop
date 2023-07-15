@@ -13,6 +13,9 @@ $bp_monitor: 1920px; // monitor
   --primary_daylight: #edf6ff;
   --primary_midnight: #0e0940;
   --primary_purple: #5631e8;
+  --primary_purple_opacity: rgba(29, 17, 79, 0.531);
+  --primary_midnight_opacity: rgba(14, 9, 64, 0.2);
+  --silver: #DBDAE6;
 
   // assign all theme colors to the place they should be rendered
   --background_color: var(--primary_daylight);
