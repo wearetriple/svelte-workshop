@@ -14,7 +14,9 @@ function transformType(response: { type: { name: string } }) {
 
 function transformAbility(response: AbilityResponse) {
   return {
-    name: response.name,
+    ability: {
+      name: response.ability.name,
+    },
     isHidden: response.is_hidden,
     slot: response.slot,
   } as Ability;
@@ -30,6 +32,11 @@ function transformSprites(response: SpritesResponse) {
     frontShiny: response.front_shiny ?? undefined,
     frontFemale: response.front_female ?? undefined,
     frontShinyFemale: response.front_shiny_female ?? undefined,
+    other: {
+      officialArtwork: {
+        frontDefault: response.other["official-artwork"].front_default ?? undefined,
+      },
+    },
   };
   return sprites;
 }
@@ -44,6 +51,8 @@ export function transformPokemon(response: PokemonResponse): Pokemon {
     id: response.id,
     types: response.types?.map(transformType) ?? [],
     weight: response.weight,
+    height: response.height,
+    base_experience: response.base_experience,
   };
   return pokemon;
 }

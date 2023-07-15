@@ -1,5 +1,7 @@
 export type Ability = {
-  name: string;
+  ability: {
+    name: string;
+  },
   slot: number;
   isHidden: boolean;
 };
@@ -13,10 +15,17 @@ export type Sprites = {
   frontFemale?: string;
   frontShiny?: string;
   frontShinyFemale?: string;
+  other: {
+    officialArtwork: {
+      frontDefault: string;
+    }
+  }
 };
 
 export type AbilityResponse = {
-  name: string;
+  ability: {
+    name: string;
+  };
   slot: number;
   is_hidden: boolean;
 };
@@ -30,6 +39,11 @@ export type SpritesResponse = {
   front_female?: string;
   front_shiny?: string;
   front_shiny_female?: string;
+  other: {
+    "official-artwork": {
+      front_default: string;
+    }
+  }
 };
 
 export type PokemonDefinitionReponse = {
@@ -46,6 +60,8 @@ export type Pokemon = {
   sprites: Sprites;
   types: string[];
   weight: number;
+  height: number;
+  base_experience: number;
 };
 
 export type PokemonResponse = {
